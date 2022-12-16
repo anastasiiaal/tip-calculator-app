@@ -1,0 +1,31 @@
+body {
+    background-color: $light-grey;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    margin: 0 auto;
+    width: 920px;
+}
+
+.calculator {
+    padding: 32px;
+    background-color: $white;
+    border-radius: 25px;
+    display: flex;
+    column-gap: 36px;
+
+    .column {
+        width: 50%;
+    }
+
+    &__right {
+        background-color: $dark;
+        border-radius: 13px;
+        padding: 40px;
+        box-sizing: border-box;
+    }
+}

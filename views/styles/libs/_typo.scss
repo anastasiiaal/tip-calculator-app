@@ -2,4 +2,13 @@
 
 body {
     font-family: 'Space Mono', monospace;
+    font-size: 24px;
+}
+
+h1 {
+    letter-spacing: .8rem;
+    // line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $dark-grey;
 }

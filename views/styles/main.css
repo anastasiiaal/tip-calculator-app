@@ -1,4 +1,38 @@
+/*_____________reset_css_____________*/
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -10,4 +44,69 @@
 
 body {
   font-family: "Space Mono", monospace;
+  font-size: 24px;
+}
+
+h1 {
+  letter-spacing: 0.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: hsl(186deg, 14%, 43%);
+}
+
+body {
+  background-color: hsl(185deg, 41%, 84%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  margin: 0 auto;
+  width: 920px;
+}
+
+.calculator {
+  padding: 32px;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 25px;
+  display: flex;
+  -moz-column-gap: 36px;
+       column-gap: 36px;
+}
+.calculator .column {
+  width: 50%;
+}
+.calculator__right {
+  background-color: hsl(183deg, 100%, 15%);
+  border-radius: 13px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/*_____________ media queries _ responsive _____________*/
+/*992-1200*/
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 850px;
+  }
+}
+/*768-992*/
+@media screen and (max-width: 992px) {
+  .container {
+    width: 700px;
+  }
+}
+/*600-768*/
+@media screen and (max-width: 768px) {
+  .container {
+    width: 540px;
+  }
+}
+/*320-600*/
+@media screen and (max-width: 600px) {
+  .container {
+    width: 85%;
+  }
 }/*# sourceMappingURL=main.css.map */
