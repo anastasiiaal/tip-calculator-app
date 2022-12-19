@@ -12,3 +12,75 @@ body {
     width: 920px;
     margin: 0 auto;
 }
+
+h3 {
+    @apply text-base text-white
+}
+
+.total {
+    @apply flex justify-between items-center
+}
+
+p.secondary {
+    @apply text-[13px] text-heading
+}
+
+p.total__sum {
+    @apply text-[48px] text-primary
+}
+
+input, input[type=submit] {
+    @apply bg-input-bg p-3 rounded-md
+}
+
+input.btn {
+    @apply bg-primary text-dark uppercase text-xl mt-32
+}
+
+.input-wrapper {
+    @apply flex flex-col
+}
+
+label {
+    @apply text-[16px] text-grey-txt mb-2
+}
+
+.tip__option {
+    @apply bg-dark p-3 rounded-md text-white w-[31%] text-center
+}
+
+input#tip {
+    @apply w-[31%]
+}
+
+input#bill::placeholder, input#people::placeholder {
+@apply text-[#9EBBBD]
+}
+
+input#tip::placeholder {
+    @apply text-xl text-heading text-right
+}
+
+input[type=number] {
+    @apply text-right text-dark
+}
+
+.bill-after {
+    @apply relative
+}
+
+.bill-after:after {
+    @apply absolute left-1.5 bottom-1.5 h-12 w-12 scale-110;
+    content: "";
+    background: url("img/icon-dollar.svg") no-repeat center center;
+}
+
+.people-after {
+    @apply relative
+}
+
+.people-after:after {
+    @apply absolute left-1.5 bottom-1.5 h-12 w-12 scale-110;
+    content: "";
+    background: url("img/icon-person.svg") no-repeat center center;
+}
