@@ -16,9 +16,9 @@
 
 <body class="bg-bg flex flex-col justify-between h-screen">
     <div class="container">
-        <h1 class="block uppercase text-center text-heading tracking-[0.8rem] py-10">Spli<br>tter</h1>
-        <div class="calculator grid grid-cols-2 gap-12 bg-white p-8 rounded-3xl">
-            <div class="h-auto calculator__left column col-start-1 col-span-1 py-4 flex flex-col justify-between">
+        <h1 class="block uppercase text-center text-heading tracking-[0.8rem] py-6 md:py-10">Spli<br>tter</h1>
+        <div class="calculator grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 bg-white p-6 pt-4 sm:p-8 rounded-3xl">
+            <div class="h-auto calculator__left column md:col-start-1 col-span-1 py-4 flex flex-col gap-6 md:justify-between">
                 <div class="input-wrapper bill-after">
                     <label for="bill">Bill</label>
                     <input type="number" id="bill" name="bill" placeholder="0" min="0">
@@ -39,7 +39,7 @@
                     <input type="number" id="people" name="people" placeholder="1" min="1" max="30">
                 </div>
             </div>
-            <div class="calculator__right column col-start-2 col-span-1 bg-dark rounded-2xl p-10 flex flex-col">
+            <div class="calculator__right column md:col-start-2 col-span-1 bg-dark rounded-2xl p-6 sm:p-10 flex flex-col">
                 <div class="total">
                     <div class="total__text">
                         <h3>Tip Amount</h3>
@@ -61,10 +61,11 @@
     </div>
 
 
-    <div class="attribution mb-2">
+    <div class="attribution mt-5 md:mt-auto mb-2">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Coded by <a href="https://github.com/anastasiiaal">Anastasiia A</a>.
     </div>
+    <script src="public/script/main.js"></script>
 </body>
 
 </html>

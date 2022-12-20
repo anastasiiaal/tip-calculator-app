@@ -27,7 +27,7 @@ p.secondary {
 }
 
 p.total__sum {
-    @apply text-[48px] text-primary
+    @apply text-[40px] lg:text-[48px] text-primary
 }
 
 input, input[type=submit], button[type=submit] {
@@ -35,7 +35,7 @@ input, input[type=submit], button[type=submit] {
 }
 
 input.btn, button[type=submit] {
-    @apply bg-primary text-dark uppercase text-xl mt-32 opacity-40 cursor-not-allowed
+    @apply bg-primary text-dark uppercase text-xl mt-10 md:mt-32 opacity-40 cursor-not-allowed
 }
 
 .tip__option {

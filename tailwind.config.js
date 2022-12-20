@@ -2,8 +2,15 @@
 module.exports = {
   content: ["./*.{html,js}"],
   theme: {
-    extend: {},
-    colors: {
+    extend: {
+      // if added here, will add to existing styles
+      screens: { 
+        '2xs': '300px',
+        'xs': '375px',
+      }
+    },
+    // if added here, will override/replace existing styles
+    colors: { 
       'bg': '#C5E4E7',
       'active': '#9FE8DF',
       'primary': '#26C2AD',
