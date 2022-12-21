@@ -31,15 +31,15 @@ p.total__sum {
 }
 
 input, input[type=submit], button[type=submit] {
-    @apply bg-input-bg p-3 rounded-md
+    @apply bg-input-bg p-2 rounded-md
 }
 
 input.btn, button[type=submit] {
-    @apply bg-primary text-dark uppercase text-xl mt-10 md:mt-32 opacity-40 cursor-not-allowed
+    @apply bg-primary text-dark uppercase py-3 text-xl mt-10 md:mt-32 opacity-40 cursor-not-allowed
 }
 
 .tip__option {
-    @apply bg-dark p-3 rounded-md text-white w-[31%] text-center
+    @apply bg-dark p-2 rounded-md text-white w-[31%] text-center
 }
 
 input.btn.active, .tip__option, button[type=submit].active {
@@ -83,7 +83,7 @@ input[type=number] {
 }
 
 .bill-after:after {
-    @apply absolute left-1.5 bottom-1.5 h-12 w-12 scale-110;
+    @apply absolute left-1.5 bottom-1.5 h-10 w-10 scale-110;
     content: "";
     background: url("img/icon-dollar.svg") no-repeat center center;
 }
@@ -93,7 +93,11 @@ input[type=number] {
 }
 
 .people-after:after {
-    @apply absolute left-1.5 bottom-1.5 h-12 w-12 scale-110;
+    @apply absolute left-1.5 bottom-1.5 h-10 w-10 scale-110;
     content: "";
     background: url("img/icon-person.svg") no-repeat center center;
+}
+
+input.error {
+    outline: 2px solid #B57B6D;
 }

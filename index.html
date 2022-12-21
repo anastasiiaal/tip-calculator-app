@@ -26,11 +26,11 @@
                 <div class="input-wrapper">
                     <label for="tip">Select tip %</label>
                     <div class="tip__wrapper flex flex-wrap justify-between">
-                        <div class="tip__option mb-3">5%</div>
-                        <div class="tip__option mb-3">10%</div>
-                        <div class="tip__option mb-3">15%</div>
-                        <div class="tip__option">25%</div>
-                        <div class="tip__option">50%</div>
+                        <div data-id="5" class="tip__option mb-3">5%</div>
+                        <div data-id="10" class="tip__option mb-3">10%</div>
+                        <div data-id="15" class="tip__option mb-3">15%</div>
+                        <div data-id="25" class="tip__option">25%</div>
+                        <div data-id="50" class="tip__option">50%</div>
                         <input type="number" id="tip" name="tip" placeholder="Custom" min="1" max="100">
                     </div>
                 </div>
@@ -45,17 +45,17 @@
                         <h3>Tip Amount</h3>
                         <p class="secondary">/ person</p>
                     </div>
-                    <p class="total__sum">$0.00</p>
+                    <p class="total__sum">$<span id="tip-amount">0.00</span></p>
                 </div>
                 <div class="total mt-9">
                     <div class="total__text">
                         <h3>Total</h3>
                         <p class="secondary">/ person</p>
                     </div>
-                    <p class="total__sum">$0.00</p>
+                    <p class="total__sum">$<span id="total-pp">0.00</span></p>
                 </div>
                 <!-- <input type="submit" class="btn" value="Reset"> -->
-                <button type="submit" class="btn">Reset</button>
+                <button type="submit" class="btn" id="btn">Reset</button>
             </div>
         </div>
     </div>

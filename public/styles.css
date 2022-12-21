@@ -642,14 +642,6 @@ video {
   background-color: rgb(0 71 75 / var(--tw-bg-opacity));
 }
 
-.p-8 {
-  padding: 2rem;
-}
-
-.p-10 {
-  padding: 2.5rem;
-}
-
 .p-6 {
   padding: 1.5rem;
 }
@@ -662,11 +654,6 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .pt-4 {
@@ -739,7 +726,7 @@ input, input[type=submit], button[type=submit] {
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
   background-color: rgb(243 248 251 / var(--tw-bg-opacity));
-  padding: 0.75rem;
+  padding: 0.5rem;
 }
 
 input.btn, button[type=submit] {
@@ -747,6 +734,8 @@ input.btn, button[type=submit] {
   cursor: not-allowed;
   --tw-bg-opacity: 1;
   background-color: rgb(38 194 173 / var(--tw-bg-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
   text-transform: uppercase;
@@ -766,7 +755,7 @@ input.btn, button[type=submit] {
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
   background-color: rgb(0 71 75 / var(--tw-bg-opacity));
-  padding: 0.75rem;
+  padding: 0.5rem;
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -854,8 +843,8 @@ input[type=number] {
   position: absolute;
   left: 0.375rem;
   bottom: 0.375rem;
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -871,8 +860,8 @@ input[type=number] {
   position: absolute;
   left: 0.375rem;
   bottom: 0.375rem;
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -880,19 +869,17 @@ input[type=number] {
   background: url("img/icon-person.svg") no-repeat center center;
 }
 
-@media (min-width: 375px) {
-  .xs\:p-10 {
-    padding: 2.5rem;
-  }
+input.error {
+  outline: 2px solid #B57B6D;
 }
 
 @media (min-width: 640px) {
-  .sm\:p-10 {
-    padding: 2.5rem;
-  }
-
   .sm\:p-8 {
     padding: 2rem;
+  }
+
+  .sm\:p-10 {
+    padding: 2.5rem;
   }
 }
 
@@ -919,10 +906,6 @@ input[type=number] {
 
   .md\:gap-12 {
     gap: 3rem;
-  }
-
-  .md\:p-10 {
-    padding: 2.5rem;
   }
 
   .md\:py-10 {
