@@ -53,7 +53,7 @@ inputArray.forEach(input => {
     })
 });
 
-
+// function counting the total numbers
 function countTotal (a,b,c) {
     let resultTotal = ((a+(a*(b/100)))/c).toFixed(2);
     let resultTip =  (resultTotal - (a/c)).toFixed(2);
@@ -63,5 +63,12 @@ function countTotal (a,b,c) {
     totalPerPerson.innerHTML = resultTotal;
     btnReset.classList.add('active');
 }
-
 // countTotal(100,5,2);
+
+// function clearing up all elems
+// lol what if i just do a page refresh
+btnReset.addEventListener('click', () => {
+    if(btnReset.classList.contains('active')) {
+        location.reload();
+    }
+})
