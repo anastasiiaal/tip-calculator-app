@@ -34,19 +34,23 @@ input, input[type=submit], button[type=submit] {
     @apply bg-input-bg p-2 rounded-md
 }
 
+input#bill, input#people {
+    @apply pr-4
+}
+
 input.btn, button[type=submit] {
     @apply bg-primary text-dark uppercase py-3 text-xl mt-10 md:mt-32 opacity-40 cursor-not-allowed
 }
 
-.tip__option {
+div.tip__option {
     @apply bg-dark p-2 rounded-md text-white w-[31%] text-center
 }
 
-input.btn.active, .tip__option, button[type=submit].active {
+input.btn.active, div.tip__option, button[type=submit].active {
     @apply opacity-100 hover:bg-active cursor-pointer transition-all hover:text-dark
 }
 
-.tip__option.active {
+div.tip__option.active {
     @apply bg-primary text-dark
 }
 
@@ -67,11 +71,11 @@ input:focus {
 }
 
 input#bill::placeholder, input#people::placeholder {
-@apply text-[#9EBBBD]
+    @apply text-[#9EBBBD] 
 }
 
 input#tip::placeholder {
-    @apply text-xl text-heading text-right
+    @apply text-xl text-heading text-center
 }
 
 input[type=number] {
@@ -100,4 +104,22 @@ input[type=number] {
 
 input.error {
     outline: 2px solid #B57B6D;
+}
+
+.error-message {
+    @apply text-[16px] text-error
+}
+
+
+/* hiding arrows in number input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
