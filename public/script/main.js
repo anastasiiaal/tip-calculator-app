@@ -17,18 +17,22 @@ const btnReset = document.getElementById('btn');
 // introducing values to pass in functions
 let valueBill = "";
 let valueTip = "";
-let valuePeople = "";
+let valuePeople = 1; // I pass 1 person as default value for those who eat solo and just want to count the tip ASAP
 
 // tip options from document
 let tipOptions = document.querySelectorAll('.tip__option');
 let tipOptionsArr = Array.prototype.slice.call(tipOptions);
 
+// what happens when one's interacting with tip options...
 tipOptionsArr.forEach(option => {
     option.addEventListener('click', () => {
+        // when any one is clicked, all the others remove class active
         tipOptionsArr.forEach(op => {
             op.classList.remove('active');
         });
+        // the clicked one gets active class to apply styles
         option.classList.add('active');
+        // register the value of a data-id as valueTip to run main function
         if(option.dataset.id != "custom") {
             valueTip = option.dataset.id;
             countTotal(valueBill, valueTip, valuePeople);
@@ -52,11 +56,17 @@ let inputArray = [inputBill, inputTip, inputPeople];
 
 // _____ function occuring on each input interaction
 inputArray.forEach(input => {
+    // if anything is inserted in an input, should verify & run a function if possible
     input.addEventListener('keyup', () => {
         if (input.id == "bill") {
             if (inputBill.value <= 0) {
                 inputBad(inputBill, errorBill);
-                tipAmountPerPerson.innerHTML = '0.00';
+                errorBill.innerHTML = 'Should be more than 0';
+                valueBill = "";
+            } else if (inputBill.value > 20000) {
+                inputBad(inputBill, errorBill);
+                errorBill.innerHTML = 'Can\'t be more than 20k';
+                valueBill = "";
             } else {
                 inputGood(inputBill, errorBill);
                 valueBill = inputBill.value;
@@ -64,16 +74,23 @@ inputArray.forEach(input => {
         } else if (input.id == "tip") {
             valueTip = inputTip.value;
         } else if (input.id == "people") {
-            valuePeople = inputPeople.value;
+            if(inputPeople.value < 1) {
+                inputBad(inputPeople, errorPeople);
+            } else {
+                inputGood(inputPeople, errorPeople);
+                valuePeople = inputPeople.value;
+            }
         }
+        // if all 3 parameters ok, will run
         countTotal(valueBill, valueTip, valuePeople);
     })
 });
 
-// function counting the total numbers
+// _____ main function counting the total numbers
 function countTotal (a,b,c) {
+    // run the count function only if all 3 parameters have been modified by user
     if (a != "" && b != "" && c != "") {
-        a = parseInt(a);
+        a = parseFloat(a);
         b = parseInt(b);
         c = parseInt(c);
         let resultTotal = ((a+(a*(b/100)))/c).toFixed(2);
@@ -83,9 +100,8 @@ function countTotal (a,b,c) {
         btnReset.classList.add('active');
     }
 }
-// countTotal(100,5,2);
 
-// function clearing up all elems
+// _____ function clearing up all elems
 // lol what if i just do a page refresh
 btnReset.addEventListener('click', () => {
     if(btnReset.classList.contains('active')) {

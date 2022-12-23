@@ -24,7 +24,7 @@
                         <label for="bill">Bill</label>
                         <p class="error-message hidden" id="error-bill">Should be more than 0</p>
                     </div>
-                    <input type="number" id="bill" name="bill" placeholder="0" min="0">
+                    <input type="number" id="bill" name="bill" placeholder="0">
                 </div>
                 <div class="input-wrapper">
                     <label for="tip">Select tip %</label>
@@ -34,13 +34,13 @@
                         <div data-id="15" class="tip__option mb-3">15%</div>
                         <div data-id="25" class="tip__option">25%</div>
                         <div data-id="50" class="tip__option">50%</div>
-                        <input data-id="custom" type="number" class="tip__option" id="tip" name="tip" placeholder="Custom" min="1" max="100">
+                        <input data-id="custom" type="number" class="tip__option" id="tip" name="tip" placeholder="Custom" min="1" max="100" oninput="validity.valid||(value='');">
                     </div>
                 </div>
                 <div class="input-wrapper people-after">
                     <div class="flex justify-between">  
                         <label for="people">Number of people</label>
-                        <p class="error-message hidden" id="error-people">Can't be zero</p>
+                        <p class="error-message hidden" id="error-people">Should be more than 0</p>
                     </div>
                     <input type="number" id="people" name="people" placeholder="1" min="1" max="30">
                 </div>
@@ -60,8 +60,7 @@
                     </div>
                     <p class="total__sum">$<span id="total-pp">0.00</span></p>
                 </div>
-                <!-- <input type="submit" class="btn" value="Reset"> -->
-                <button type="submit" class="btn" id="btn">Reset</button>
+                <button class="btn" id="btn">Reset</button>
             </div>
         </div>
     </div>

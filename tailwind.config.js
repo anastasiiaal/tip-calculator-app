@@ -5,7 +5,6 @@ module.exports = {
     extend: {
       // if added here, will add to existing styles
       screens: { 
-        '2xs': '300px',
         'xs': '375px',
       }
     },

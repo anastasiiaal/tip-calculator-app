@@ -27,10 +27,10 @@ p.secondary {
 }
 
 p.total__sum {
-    @apply text-[40px] lg:text-[48px] text-primary
+    @apply text-[30px] sm:text-[40px] md:text-[30px] lg:text-[48px] text-primary
 }
 
-input, input[type=submit], button[type=submit] {
+input, button.btn {
     @apply bg-input-bg p-2 rounded-md
 }
 
@@ -38,7 +38,7 @@ input#bill, input#people {
     @apply pr-4
 }
 
-input.btn, button[type=submit] {
+button.btn {
     @apply bg-primary text-dark uppercase py-3 text-xl mt-10 md:mt-32 opacity-40 cursor-not-allowed
 }
 
@@ -46,7 +46,7 @@ div.tip__option {
     @apply bg-dark p-2 rounded-md text-white w-[31%] text-center
 }
 
-input.btn.active, div.tip__option, button[type=submit].active {
+div.tip__option, button.btn.active {
     @apply opacity-100 hover:bg-active cursor-pointer transition-all hover:text-dark
 }
 
@@ -63,7 +63,7 @@ label {
 }
 
 input#tip {
-    @apply w-[31%]
+    @apply w-[31%] pr-4
 }
 
 input:focus {
@@ -75,7 +75,7 @@ input#bill::placeholder, input#people::placeholder {
 }
 
 input#tip::placeholder {
-    @apply text-xl text-heading text-center
+    @apply text-xl text-heading text-right pr-2
 }
 
 input[type=number] {
@@ -107,11 +107,11 @@ input.error {
 }
 
 .error-message {
-    @apply text-[16px] text-error
+    @apply text-[16px] text-error text-right
 }
 
 
-/* hiding arrows in number input */
+/* hiding the default arrows in number inputs */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -122,4 +122,33 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+/* media-queries */
+.container {
+    width: 100%;
+}
+  
+@media (min-width: 375px) {
+    .container {
+      max-width: 375px;
+    }
+}
+  
+@media (min-width: 640px) {
+    .container {
+      max-width: 640px;
+    }
+}
+  
+@media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+}
+  
+@media (min-width: 1024px) {
+    .container {
+      max-width: 920px;
+    }
 }
