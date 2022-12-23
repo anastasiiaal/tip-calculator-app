@@ -11,7 +11,6 @@ This is my solution to the [Tip calculator app challenge on Frontend Mentor](htt
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
 - [Author](#author)
 
 ## Overview
@@ -34,8 +33,8 @@ Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to t
 
 ### Links
 
-- Solution URL: [The code is right here](https://github.com/anastasiiaal/tip-calculator-app)
-- Live Site URL: [To play around or use](https://)
+- Live Site URL: [Feel free to play around or use](https://www.anastasiia.pro/projects/tip-calculator/) (any feedback would be highly appreciated!)
+- Solution URL: [The code you see right on this page](https://github.com/anastasiiaal/tip-calculator-app)
 
 ## My process
 
@@ -50,27 +49,32 @@ Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to t
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This challenge helped me come back to and better memorize the Tailwind CSS classes, and doing some algo was a true pleasure!
 
-To see how you can add code snippets, see below:
+Tailwind, you can be awesome sometimes:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="calculator grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 bg-white p-6 pt-4 sm:p-8 rounded-3xl"></div>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+button.btn {
+  @apply bg-primary text-dark uppercase py-3 text-xl mt-10 md:mt-32 opacity-40 cursor-not-allowed
 }
 ```
+
+Maths, I really did miss you:
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+function countTotal (a,b,c) {
+  if (a != "" && b != "" && c != "") {
+    let resultTotal = ((a+(a*(b/100)))/c).toFixed(2);
+    let resultTip =  (resultTotal - (a/c)).toFixed(2);
+    tipAmountPerPerson.innerHTML = resultTip;
+    totalPerPerson.innerHTML = resultTotal;
+    btnReset.classList.add('active');
+  }
 }
 ```
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
 ## Author
 
