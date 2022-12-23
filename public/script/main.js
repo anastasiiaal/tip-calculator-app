@@ -14,9 +14,27 @@ const totalPerPerson = document.getElementById('total-pp');
 // button reset
 const btnReset = document.getElementById('btn');
 
+// introducing values to pass in functions
+let valueBill = "";
+let valueTip = "";
+let valuePeople = "";
+
 // tip options from document
 let tipOptions = document.querySelectorAll('.tip__option');
-console.log(tipOptions);
+let tipOptionsArr = Array.prototype.slice.call(tipOptions);
+
+tipOptionsArr.forEach(option => {
+    option.addEventListener('click', () => {
+        tipOptionsArr.forEach(op => {
+            op.classList.remove('active');
+        });
+        option.classList.add('active');
+        if(option.dataset.id != "custom") {
+            valueTip = option.dataset.id;
+            countTotal(valueBill, valueTip, valuePeople);
+        }
+    })
+})
 
 // _____ functions for correctly/incorrectly filled inputs
 function inputBad(i,e) {
@@ -41,27 +59,29 @@ inputArray.forEach(input => {
                 tipAmountPerPerson.innerHTML = '0.00';
             } else {
                 inputGood(inputBill, errorBill);
-                let valueBill = inputBill.value;
-                tipAmountPerPerson.innerHTML = (valueBill / 3).toFixed(2);
-                console.log(valueBill);
+                valueBill = inputBill.value;
             }
         } else if (input.id == "tip") {
             valueTip = inputTip.value;
         } else if (input.id == "people") {
             valuePeople = inputPeople.value;
         }
+        countTotal(valueBill, valueTip, valuePeople);
     })
 });
 
 // function counting the total numbers
 function countTotal (a,b,c) {
-    let resultTotal = ((a+(a*(b/100)))/c).toFixed(2);
-    let resultTip =  (resultTotal - (a/c)).toFixed(2);
-    console.log(resultTip);
-    console.log(resultTotal);
-    tipAmountPerPerson.innerHTML = resultTip;
-    totalPerPerson.innerHTML = resultTotal;
-    btnReset.classList.add('active');
+    if (a != "" && b != "" && c != "") {
+        a = parseInt(a);
+        b = parseInt(b);
+        c = parseInt(c);
+        let resultTotal = ((a+(a*(b/100)))/c).toFixed(2);
+        let resultTip =  (resultTotal - (a/c)).toFixed(2);
+        tipAmountPerPerson.innerHTML = resultTip;
+        totalPerPerson.innerHTML = resultTotal;
+        btnReset.classList.add('active');
+    }
 }
 // countTotal(100,5,2);
 
