@@ -27,7 +27,7 @@ p.secondary {
 }
 
 p.total__sum {
-    @apply text-[30px] sm:text-[40px] md:text-[30px] lg:text-[48px] text-primary
+    @apply text-[30px] sm:text-[40px] lg:text-[48px] text-primary
 }
 
 input, button.btn {
@@ -39,7 +39,7 @@ input#bill, input#people {
 }
 
 button.btn {
-    @apply bg-primary text-dark uppercase py-3 text-xl mt-10 md:mt-32 opacity-40 cursor-not-allowed
+    @apply bg-primary text-dark uppercase py-3 text-xl mt-10 md:mt-20 lg:mt-32 opacity-40 cursor-not-allowed
 }
 
 div.tip__option {
@@ -63,7 +63,7 @@ label {
 }
 
 input#tip {
-    @apply w-[31%] pr-4
+    @apply w-[31%] text-center
 }
 
 input:focus {
@@ -75,7 +75,7 @@ input#bill::placeholder, input#people::placeholder {
 }
 
 input#tip::placeholder {
-    @apply text-xl text-heading text-right pr-2
+    @apply text-xl text-heading
 }
 
 input[type=number] {

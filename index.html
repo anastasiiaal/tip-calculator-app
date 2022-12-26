@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./public/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="76x76" href="./public/img/favicon-76x76.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="./public/img/favicon-128x128.png">
+    <link rel="icon" type="image/png" sizes="228x228" href="./public/img/favicon-228x228.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
@@ -17,12 +20,12 @@
 <body class="bg-bg flex flex-col justify-between h-screen">
     <div class="container">
         <h1 class="block uppercase text-center text-heading tracking-[0.8rem] py-6 md:py-10">Spli<br>tter</h1>
-        <div class="calculator grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 bg-white p-6 pt-4 sm:p-8 rounded-3xl">
-            <div class="h-auto calculator__left column md:col-start-1 col-span-1 py-4 flex flex-col gap-6 md:justify-between">
+        <div class="calculator grid grid-cols-1 gap-6 md:gap-10 lg:grid-cols-2 lg:gap-12 bg-white p-6 pt-4 sm:p-8 rounded-3xl">
+            <div class="h-auto calculator__left column lg:col-start-1 col-span-1 py-4 flex flex-col gap-6 lg:justify-between">
                 <div class="input-wrapper bill-after">
                     <div class="flex justify-between">  
                         <label for="bill">Bill</label>
-                        <p class="error-message hidden" id="error-bill">Should be more than 0</p>
+                        <p class="error-message hidden" id="error-bill"></p>
                     </div>
                     <input type="number" id="bill" name="bill" placeholder="0">
                 </div>
@@ -34,18 +37,18 @@
                         <div data-id="15" class="tip__option mb-3">15%</div>
                         <div data-id="25" class="tip__option">25%</div>
                         <div data-id="50" class="tip__option">50%</div>
-                        <input data-id="custom" type="number" class="tip__option" id="tip" name="tip" placeholder="Custom" min="1" max="100" oninput="validity.valid||(value='');">
+                        <input data-id="custom" type="number" class="tip__option" id="tip" name="tip" placeholder="Custom %" min="1" max="100" oninput="validity.valid||(value='');">
                     </div>
                 </div>
                 <div class="input-wrapper people-after">
                     <div class="flex justify-between">  
                         <label for="people">Number of people</label>
-                        <p class="error-message hidden" id="error-people">Should be more than 0</p>
+                        <p class="error-message hidden" id="error-people"></p>
                     </div>
                     <input type="number" id="people" name="people" placeholder="1" min="1" max="30">
                 </div>
             </div>
-            <div class="calculator__right column md:col-start-2 col-span-1 bg-dark rounded-2xl p-6 sm:p-10 flex flex-col">
+            <div class="calculator__right column lg:col-start-2 col-span-1 bg-dark rounded-2xl p-6 sm:p-10 flex flex-col">
                 <div class="total">
                     <div class="total__text">
                         <h3>Tip Amount</h3>
@@ -66,7 +69,7 @@
     </div>
 
 
-    <div class="attribution mt-5 md:mt-auto mb-2">
+    <div class="attribution mt-5 md:mt-auto md:pt-5 mb-3">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Coded by <a href="https://github.com/anastasiiaal">Anastasiia A</a>.
     </div>

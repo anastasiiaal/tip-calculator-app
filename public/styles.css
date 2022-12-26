@@ -569,10 +569,6 @@ video {
   margin-top: 1.25rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .block {
   display: block;
 }
@@ -720,12 +716,6 @@ p.total__sum {
   }
 }
 
-@media (min-width: 768px) {
-  p.total__sum {
-    font-size: 30px;
-  }
-}
-
 @media (min-width: 1024px) {
   p.total__sum {
     font-size: 48px;
@@ -759,6 +749,12 @@ button.btn {
 }
 
 @media (min-width: 768px) {
+  button.btn {
+    margin-top: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
   button.btn {
     margin-top: 8rem;
   }
@@ -811,7 +807,7 @@ label {
 
 input#tip {
   width: 31%;
-  padding-right: 1rem;
+  text-align: center;
 }
 
 input:focus {
@@ -829,8 +825,6 @@ input#bill::placeholder, input#people::placeholder {
 }
 
 input#tip::-moz-placeholder {
-  padding-right: 0.5rem;
-  text-align: right;
   font-size: 1.25rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
@@ -838,8 +832,6 @@ input#tip::-moz-placeholder {
 }
 
 input#tip::placeholder {
-  padding-right: 0.5rem;
-  text-align: right;
   font-size: 1.25rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
@@ -954,32 +946,42 @@ input[type=number] {
 }
 
 @media (min-width: 768px) {
-  .md\:col-start-1 {
-    grid-column-start: 1;
-  }
-
-  .md\:col-start-2 {
-    grid-column-start: 2;
-  }
-
   .md\:mt-auto {
     margin-top: auto;
   }
 
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:justify-between {
-    justify-content: space-between;
-  }
-
-  .md\:gap-12 {
-    gap: 3rem;
+  .md\:gap-10 {
+    gap: 2.5rem;
   }
 
   .md\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .md\:pt-5 {
+    padding-top: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:col-start-1 {
+    grid-column-start: 1;
+  }
+
+  .lg\:col-start-2 {
+    grid-column-start: 2;
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:justify-between {
+    justify-content: space-between;
+  }
+
+  .lg\:gap-12 {
+    gap: 3rem;
   }
 }

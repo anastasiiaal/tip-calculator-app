@@ -32,10 +32,12 @@ tipOptionsArr.forEach(option => {
         });
         // the clicked one gets active class to apply styles
         option.classList.add('active');
-        // register the value of a data-id as valueTip to run main function
+        // register the value of a data-id as valueTip to run main function (if not a custon value)
         if(option.dataset.id != "custom") {
             valueTip = option.dataset.id;
             countTotal(valueBill, valueTip, valuePeople);
+            // clear custom tip input value
+            inputTip.value = "";
         }
     })
 })
@@ -63,9 +65,9 @@ inputArray.forEach(input => {
                 inputBad(inputBill, errorBill);
                 errorBill.innerHTML = 'Should be more than 0';
                 valueBill = "";
-            } else if (inputBill.value > 20000) {
+            } else if (inputBill.value > 100000) {
                 inputBad(inputBill, errorBill);
-                errorBill.innerHTML = 'Can\'t be more than 20k';
+                errorBill.innerHTML = 'Can\'t be more than 100k';
                 valueBill = "";
             } else {
                 inputGood(inputBill, errorBill);
@@ -74,8 +76,19 @@ inputArray.forEach(input => {
         } else if (input.id == "tip") {
             valueTip = inputTip.value;
         } else if (input.id == "people") {
+            inputPeople.placeholder = '0';
             if(inputPeople.value < 1) {
                 inputBad(inputPeople, errorPeople);
+                errorPeople.innerHTML = 'Should be more than 0';
+                valuePeople = "";
+            } else if (inputPeople.value > 50) {
+                inputBad(inputPeople, errorPeople);
+                errorPeople.innerHTML = 'Cant\' be more than 50';
+                valuePeople = "";
+            } else if (inputPeople.value.includes('.')) {
+                inputBad(inputPeople, errorPeople);
+                errorPeople.innerHTML = 'Only natural numbers';
+                valuePeople = "";
             } else {
                 inputGood(inputPeople, errorPeople);
                 valuePeople = inputPeople.value;
