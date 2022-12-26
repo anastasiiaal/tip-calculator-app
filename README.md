@@ -1,4 +1,4 @@
-# Frontend Mentor - Tip calculator app solution
+# Frontend Mentor - Tip calculator app solution 💰
 
 This is my solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX).
 
@@ -34,7 +34,8 @@ Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to t
 ### Links
 
 - Live Site URL: [Feel free to play around or use](https://www.anastasiia.pro/projects/tip-calculator/) (any feedback would be highly appreciated!)
-- Solution URL: [The code you see right on this page](https://github.com/anastasiiaal/tip-calculator-app)
+- My solution code: [The code you see right on this page](https://github.com/anastasiiaal/tip-calculator-app)
+- Original challenge: [Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX)
 
 ## My process
 
@@ -54,7 +55,7 @@ This challenge helped me come back to and better memorize the Tailwind CSS class
 Tailwind, you can be awesome sometimes:
 
 ```html
-<div class="calculator grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 bg-white p-6 pt-4 sm:p-8 rounded-3xl"></div>
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 bg-white p-6 sm:p-8 rounded-3xl"></div>
 ```
 ```css
 button.btn {
