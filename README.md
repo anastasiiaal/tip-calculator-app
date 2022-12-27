@@ -69,7 +69,7 @@ Maths, I really did miss you:
 function countTotal (a,b,c) {
   if (a != "" && b != "" && c != "") {
     let resultTotal = ((a+(a*(b/100)))/c).toFixed(2);
-    let resultTip =  (resultTotal - (a/c)).toFixed(2);
+    let resultTip = (resultTotal - (a/c)).toFixed(2);
     tipAmountPerPerson.innerHTML = resultTip;
     totalPerPerson.innerHTML = resultTotal;
     btnReset.classList.add('active');

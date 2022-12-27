@@ -14,7 +14,7 @@ body {
     margin: 0 auto;
 }
 
-h3 {
+h2 {
     @apply text-base text-white
 }
 
@@ -23,7 +23,7 @@ h3 {
 }
 
 p.secondary {
-    @apply text-[13px] text-heading
+    @apply text-[13px] text-[#9ebbbd85]
 }
 
 p.total__sum {
@@ -39,7 +39,7 @@ input#bill, input#people {
 }
 
 button.btn {
-    @apply bg-primary text-dark uppercase py-3 text-xl mt-10 md:mt-20 lg:mt-32 opacity-40 cursor-not-allowed
+    @apply bg-primary text-dark uppercase py-3 text-xl mt-10 md:mt-20 lg:mt-32 opacity-30 cursor-not-allowed
 }
 
 div.tip__option {
